@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Имя & Имя — Свадьба</title>
+<title>Уля & Женя — Свадьба</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
 
@@ -18,22 +18,81 @@ body {
 
 section {
   max-width: 900px;
-  margin: 0 auto;
-  padding: 80px 20px;
+  margin: 10px auto;
   background: #fff;
   border-radius: 0;
-  box-shadow: 0px 15px 40px rgba(0,0,0,0);
   text-align: center;
 }
 
-section1 {
+.hero {
+  padding: 100px 0px 0px;
+  background: #d68d6d;
+}
+
+.hero-image-wrapper {
+  margin-top: 100px;
+  padding-bottom: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img {
+  width: 340px;
+}
+
+.date {
+  padding: 100px 0px 10px;
+  background: #ff9669;
+}
+
+.date-img {
+  width: 80%;
   max-width: 900px;
-  margin: 0 auto;
-  padding: 200px;
-  background: #fff;
-  border-radius: 0;
-  box-shadow: 0px 15px 40px rgba(0,0,0,0);
-  text-align: center;
+}
+
+.location {
+  padding: 400px 0px 400px;
+  background: #faaae9;
+}
+
+.location-img {
+  width: 100%
+  max-width: 900px
+}
+
+.schedule {
+  padding: 400px 0px 400px;
+  background: #aafad3;
+}
+
+.dresscode {
+  padding: 400px 0px 400px;
+  background: #aaf5fa;
+}
+
+.dresscode-img {
+  width: 100%
+  max-width: 900px
+}
+
+.gift {
+  padding: 400px 0px 400px;
+  background: #baaafa;
+}
+
+.gift-img {
+  width: 100%
+  max-width: 900px
+}
+
+.form {
+  padding: 400px 0px 400px;
+  background: #f3faaa;
+}
+
+.final {
+  padding: 400px 0px 400px;
+  background: #faaae3;
 }
 
 .hero h1 {
@@ -147,13 +206,17 @@ h2 {
 
 <section class="hero">
   <h1>Мы женимся</h1>
-  <div class="names">Имя ❤ Имя</div>
+  <div class="names">Женя ❤ Уля</div>
   <p class="subtitle">Наконец-то свадьба</p>
+  <div class="hero-image-wrapper">
+    <img src="images/YE.png" alt="Ульяна и Евгений" class="hero-img">
+  </div>
 </section>
 
 <section class="date">
-  <div class="date-number">07.07.2026</div>
+  <div class="date-number">04.07.2026</div>
   <p>Сохраните этот день</p>
+  <img src="images/calendar.png" alt="Календарь" class="date-img">
   <a class="btn" href="wedding.ics" download>Добавить в календарь</a>
 </section>
 
