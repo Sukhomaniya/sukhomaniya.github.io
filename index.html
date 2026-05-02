@@ -2,13 +2,18 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">         <!--добавить в конце maximum-scale=1.0-->
 
-<title>Имя & Имя...</title>
+<title>Имя & Имя</title>							<!--Поменять Имена-->
+
+
+<!--↓↓↓Добавить шрифты↓↓↓-->
+
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
+    /*↓↓↓Эта хуйня чтобы на телефоне все хорошо работало в плане оформления↓↓↓*/
     /*
     html, body {
       width: 100%;
@@ -16,8 +21,12 @@
     }
     */
 
+
+/*↓↓↓Эта хуйня чтобы на компе не работало↓↓↓*/
+
+
 /*
-#desktop-block {
+#desktop-block {				
   position: fixed;
   inset: 0;
   background: #f6efe9;
@@ -41,28 +50,28 @@
 }
 */
   
-body {
+body {								/*body это вокруг секций*/
   margin: 0;
-  background: #f6efe9;
+  background: #f6efe9;						/*Возможно поменять бэкграунд*/
   font-family: 'Playfair Display', serif;
-  color: #4a3f35;
+  color: #4a3f35;						/*с цветом текста тоже поиграться*/
 }
 
-section {
-  width: 900px;
-  margin: 10px auto;
+section {				/*общая настройка секций*/
+  width: 900px;                     /*width пока не трогать, чтобы секция на весь экран не становилась, потом изменить на 100%*/
+  margin: 10px auto;			/*в конце работы поставить 0px*/
   background: #fff;
   border-radius: 0;
   text-align: center;
 }
 
-.hero {
+.hero {						/*настройка секции главных героев*/
   padding: 100px 0px 0px;
-  background: #d68d6d;
+  background: #d68d6d;				/*цвет поменять*/
   overflow: hidden;
 }
 
-.hero-image-wrapper {
+.hero-image-wrapper {				/*настройка фотографии*/
   margin-top: 100px;
   padding-bottom: 0px;
   display: flex;
@@ -75,7 +84,7 @@ section {
 
 .date {
   padding: 100px 0px 10px;
-  background: #ff9669;
+  background: #ff9669;				/*цвет поменять*/
 }
 
 .date-image-wrapper {
@@ -92,7 +101,7 @@ section {
 
 .location {
   padding: 400px 0px 400px;
-  background: #faaae9;
+  background: #faaae9;						/*цвет поменять*/
 }
 
 .location-image-wrapper {
@@ -109,12 +118,12 @@ section {
 
 .schedule {
   padding: 400px 0px 400px;
-  background: #aafad3;
+  background: #aafad3;						/*цвет поменять*/
 }
 
 .dresscode {
   padding: 400px 0px 400px;
-  background: #aaf5fa;
+  background: #aaf5fa;						/*цвет поменять*/
 }
 
 .dresscode-image-wrapper {
@@ -131,7 +140,7 @@ section {
 
 .gift {
   padding: 400px 0px 400px;
-  background: #baaafa;
+  background: #baaafa;						/*цвет поменять*/
 }
 
 .gift-image-wrapper {
@@ -148,12 +157,12 @@ section {
 
 .form {
   padding: 400px 0px 400px;
-  background: #f3faaa;
+  background: #f3faaa;						/*цвет поменять*/
 }
 
 .final {
   padding: 400px 0px 400px;
-  background: #faaae3;
+  background: #faaae3;						/*цвет поменять*/
 }
 
 .hero h1 {
@@ -175,6 +184,7 @@ section {
 h2 {
   font-size: 34px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .date-number {
@@ -232,27 +242,31 @@ h2 {
 
 .form label {
   display: block;
+  padding: 0px 25px;
   margin-top: 20px;
   font-weight: 600;
 }
 
 .form input, .form select {
-  width: 100%;
-  padding: 12px 0px 12px;
+  width: 825px;
+  padding: 12px 0px 12px 10px;
   margin-top: 8px;
   border-radius: 18px;
   border: 1px solid #ddd;
+  transform: translateX(25px);
 }
 
 .form button {
+  justify-content: center;
   margin-top: 30px;
-  width: 100%;
+  width: 225px;
   padding: 15px;
   border: none;
   border-radius: 25px;
   background: #d6c2b2;
   color: #fff;
   font-size: 18px;
+  /*transform: translateX(337px);*/
 }
 
 .final {
@@ -265,13 +279,19 @@ h2 {
 
 <body>
 
-<!--<div id="desktop-block">
+
+<!-- ↓↓↓Эта хуйня чтобы на компе не работало↓↓↓ -->
+
+
+<!--
+<div id="desktop-block">
   <div class="desktop-message">
     <p>🤍</p>
     <h1>Пожалуйста, откройте приглашение на телефоне</h1>
     <p>Это приглашение создано для мобильных устройств</p>
   </div>
-</div>-->
+</div>
+-->
 
 <section class="hero">
   <h1>Мы женимся</h1>
@@ -344,7 +364,14 @@ h2 {
   Мы вас очень ждём 🤍
 </section>
 
-<!--<script>
+
+
+<!-- ↓↓↓↓Эта хуйня чтобы на компе не работало↓↓↓↓ -->
+
+
+
+<!--
+<script>
 function checkDevice() {
   const isDesktop = window.innerWidth > 1024;
 
@@ -361,7 +388,8 @@ function checkDevice() {
 
 checkDevice();
 window.addEventListener('resize', checkDevice);
-</script>-->
+</script>
+-->
   
 </body>
 </html> 
