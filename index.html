@@ -2,15 +2,11 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">         <!--добавить в конце maximum-scale=1.0-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-<title>Имя & Имя</title>							<!--Поменять Имена-->
+<title>Ульяна & Евгений</title>	
 
-
-<!--↓↓↓Добавить шрифты↓↓↓-->
-
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
     /*↓↓↓Эта хуйня чтобы на телефоне все хорошо работало в плане оформления↓↓↓*/
@@ -52,39 +48,51 @@
   
 body {								/*body это вокруг секций*/
   margin: 0;
-  background: #f6efe9;						/*Возможно поменять бэкграунд*/
+  background: #f7f5f5;						/*Возможно поменять бэкграунд*/
   font-family: 'Playfair Display', serif;
-  color: #4a3f35;						/*с цветом текста тоже поиграться*/
 }
 
 section {				/*общая настройка секций*/
   width: 900px;                     /*width пока не трогать, чтобы секция на весь экран не становилась, потом изменить на 100%*/
-  margin: 10px auto;			/*в конце работы поставить 0px*/
-  background: #fff;
+  margin: 0px auto;			/*в конце работы поставить 0px*/
+  background: #fbf5e9;
   border-radius: 0;
   text-align: center;
 }
 
 .hero {						/*настройка секции главных героев*/
+  position: relative;
   padding: 100px 0px 0px;
-  background: #d68d6d;				/*цвет поменять*/
+  background: #fbf5e9;				/*цвет поменять*/
   overflow: hidden;
 }
 
 .hero-image-wrapper {				/*настройка фотографии*/
-  margin-top: 100px;
+  margin-top: 300px;
   padding-bottom: 0px;
   display: flex;
   justify-content: center;
 }
 
 .hero-img {
-  width: 340px;
+  width: 50%;
+}
+
+.hero-image-wrapper-hearts {
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img-hearts {
+  width: 100%;
 }
 
 .date {
   padding: 100px 0px 10px;
-  background: #ff9669;				/*цвет поменять*/
+  background: #fbf5e9;				/*цвет поменять*/
 }
 
 .date-image-wrapper {
@@ -101,7 +109,7 @@ section {				/*общая настройка секций*/
 
 .location {
   padding: 400px 0px 400px;
-  background: #faaae9;						/*цвет поменять*/
+  background: #790013;						/*цвет поменять*/
 }
 
 .location-image-wrapper {
@@ -118,12 +126,12 @@ section {				/*общая настройка секций*/
 
 .schedule {
   padding: 400px 0px 400px;
-  background: #aafad3;						/*цвет поменять*/
+  background: #fbf5e9;						/*цвет поменять*/
 }
 
 .dresscode {
   padding: 400px 0px 400px;
-  background: #aaf5fa;						/*цвет поменять*/
+  background: #790013;						/*цвет поменять*/
 }
 
 .dresscode-image-wrapper {
@@ -140,7 +148,7 @@ section {				/*общая настройка секций*/
 
 .gift {
   padding: 400px 0px 400px;
-  background: #baaafa;						/*цвет поменять*/
+  background: #fbf5e9;						/*цвет поменять*/
 }
 
 .gift-image-wrapper {
@@ -157,24 +165,91 @@ section {				/*общая настройка секций*/
 
 .form {
   padding: 400px 0px 400px;
-  background: #f3faaa;						/*цвет поменять*/
+  background: #790013;						/*цвет поменять*/
 }
 
 .final {
   padding: 400px 0px 400px;
-  background: #faaae3;						/*цвет поменять*/
+  background: #790013;						/*цвет поменять*/
 }
 
 .hero h1 {
-  font-size: 50px;
+  font-family: 'Caveat', cursive;
+  color: #790013;
+  font-weight: 700;						/*жирный*/
+  font-size: 100px;
   margin-bottom: 10px;
 }
 
-.names {
-  font-family: 'Great Vibes', cursive;
-  font-size: 48px;
-  margin: 15px 0;
+.hero-title1 {							/*Тили - Тили*/
+  position: absolute;
+  top: -5%;
+  left: 15%;
+  transform: rotate(-3deg);
 }
+
+.hero-title2 {							/*Тесто!*/
+  position: absolute;
+  top: 5%;
+  right: 15%;
+  transform: rotate(2deg);
+}
+
+
+
+/*Евгений*/
+
+
+
+.names1 {
+  position: absolute;
+  top: 35%;
+  left: 18%;
+  transform: rotate(-15deg);
+  font-family: 'Caveat', cursive;
+  color: #790013;
+  font-weight: 600;
+  font-size: 80px;
+}
+
+
+
+/*Ульяна*/
+
+
+
+.names2 {
+  position: absolute;
+  top: 40%;
+  right: 21%;
+  transform: rotate(15deg);
+  font-family: 'Caveat', cursive;
+  color: #790013;
+  font-weight: 600;
+  font-size: 80px;
+}
+
+.action {
+  position: absolute;
+  bottom: 2.8%;
+  left: 32%;
+  transform: rotate(0deg);
+  font-family: 'Caveat', cursive;
+  color: #fbf5e9;
+  font-weight: 700;
+  font-size: 70px;
+}
+
+.action .light {
+  position: absolute;
+  bottom: 2.8%;
+  transform: rotate(0deg);
+  font-family: 'Caveat', cursive;
+  color: #fbf5e9;
+  font-weight: 700;
+  font-size: 55px;
+}
+
 
 .subtitle {
   font-size: 18px;
@@ -280,7 +355,7 @@ h2 {
 <body>
 
 
-<!-- ↓↓↓Эта хуйня чтобы на компе не работало↓↓↓ -->
+<!-- ↓↓↓Эта хуйня чтобы на компе не работало↓↓↓ -->							<!--здесь начинается HTML-->
 
 
 <!--
@@ -294,12 +369,17 @@ h2 {
 -->
 
 <section class="hero">
-  <h1>Мы женимся</h1>
-  <div class="names">Имя ❤ Имя</div>
-  <p class="subtitle">Наконец-то свадьба</p>
-  <div class="hero-image-wrapper">
-    <img src="images/облако.jpg" alt="Имя и Имя" class="hero-img">
+  <h1 class="hero-title1">Тили - Тили</h1>
+  <h1 class="hero-title2">Тесто!</h1>
+  <div class="names1">Женя</div>
+  <div class="names2">Уля</div>
+  <div class="hero-image-wrapper-hearts">
+    <img src="images/Hearts.png" alt="Сердчеки" class="hero-img-hearts">
   </div>
+  <div class="hero-image-wrapper">
+    <img src="images/YEdouble.png" alt="Женя и Уля" class="hero-img">
+  </div>
+  <div class="action">мы женимся <span class="light">!</span></div>
 </section>
 
 <section class="date">
