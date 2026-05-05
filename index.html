@@ -92,31 +92,25 @@ section {				/*общая настройка секций*/
 
 .date {
   padding: 100px 0px 10px;
-  background: #fbf5e9;				/*цвет поменять*/
+  background: #fbf5e9;
+  position: relative;
 }
 
-.date-image-wrapper {
-  margin-top: 100px;
-  padding-bottom: 0px;
-  display: flex;
-  justify-content: center;
-}
-  
 .date-img {
   width: 80%;
   max-width: 900px;
 }
 
-.location {
-  padding: 400px 0px 400px;
-  background: #790013;						/*цвет поменять*/
+.date-circle {
+  position: absolute;
+  transform: translate(-196px,228px);
+  color: #790013;
 }
 
-.location-image-wrapper {
-  margin-top: 100px;
-  padding-bottom: 0px;
-  display: flex;
-  justify-content: center;
+.location {
+  position: relative;
+  padding: 100px 0px 100px;
+  background: #790013;						/*цвет поменять*/
 }
   
 .location-img {
@@ -197,7 +191,7 @@ section {				/*общая настройка секций*/
 
 
 
-/*Евгений*/
+/*Жених*/
 
 
 
@@ -214,14 +208,14 @@ section {				/*общая настройка секций*/
 
 
 
-/*Ульяна*/
+/*Невеста*/
 
 
 
 .names2 {
   position: absolute;
   top: 40%;
-  right: 21%;
+  right: 16%;
   transform: rotate(15deg);
   font-family: 'Caveat', cursive;
   color: #790013;
@@ -262,9 +256,18 @@ h2 {
   text-align: center;
 }
 
+.date-notification {
+  font-family: 'Caveat', cursive;
+  color: #5a564b;
+  font-weight: 400;
+  font-size: 40px;
+}
+
 .date-number {
-  font-size: 42px;
-  margin-bottom: 15px;
+  font-family: 'Caveat', cursive;
+  color: #790013;
+  font-size: 60px;
+  margin-bottom: 0px;
 }
 
 .btn {
@@ -280,6 +283,27 @@ h2 {
 
 .btn:hover {
   background: #bfa89e;
+}
+
+.location-text {
+  font-family: 'Caveat', cursive;
+  color: #fbf5e9;
+  font-weight: 700;
+  font-size: 70px;
+}
+
+.location-Ivanovo {
+  font-family: 'Caveat', cursive;
+  color: #fbf5e9;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.location-house {
+  font-family: 'Caveat', cursive;
+  color: #fbf5e9;
+  font-weight: 400;
+  font-size: 40px;
 }
 
 .location img {
@@ -370,8 +394,8 @@ h2 {
 <section class="hero">
   <h1 class="hero-title1">Тили - Тили</h1>
   <h1 class="hero-title2">Тесто!</h1>
-  <div class="names1">Женя</div>
-  <div class="names2">Уля</div>
+  <div class="names1">Жених</div>
+  <div class="names2">Невеста</div>
   <div class="hero-image-wrapper-hearts">
     <img src="images/Hearts.png" alt="Сердчеки" class="hero-img-hearts">
   </div>
@@ -382,17 +406,19 @@ h2 {
 </section>
 
 <section class="date">
+  <div class="date-notification">Дорогие друзья и близкие,<br>мы приглашаем вас разделить<br>с нами наше свадебное торжество,<br>которое состоится<br></div>
   <div class="date-number">04.07.2026</div>
-  <p>Сохраните этот день</p>
-  <img src="images/calendar.png" alt="Календарь" class="date-img">
-  <a class="btn" href="wedding.ics" download>Добавить в календарь</a>
+  <img src="images/календарь.png" alt="Календарь" class="date-img">
+  <img src="images/Обводка календаря.png" alt="Обводка календаря" class="date-circle">
+  <!--<a class="btn" href="wedding.ics" download>Добавить в календарь</a>-->
 </section>
 
 <section class="location">
-  <img src="https://images.unsplash.com/photo-1522156373667-4c7234bbd804" alt="">
-  <h2>Место торжества</h2>
-  <p>г. Дорог<br>Ахуенный отель</p>
-  <a class="btn" target="_blank" href="">Открыть на карте</a>
+  <div class="location-text">Место торжества</div>
+  <img src="images/Место торжества.jpg" alt="Место торжества" class="location-img">
+  <div class="location-Ivanovo">г. Иваново</div>
+  <div class="location-house">Загородное шоссе, деревня Ясюниха</div>
+  <!--<a class="btn" target="_blank" href="">Открыть на карте</a>-->
 </section>
 
 <section class="schedule">
