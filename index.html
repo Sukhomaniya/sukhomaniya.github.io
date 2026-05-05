@@ -63,11 +63,11 @@ section {				/*общая настройка секций*/
 .hero {						/*настройка секции главных героев*/
   position: relative;
   padding: 100px 0px 0px;
-  background: #fbf5e9;				/*цвет поменять*/
+  background: #fbf5e9;
   overflow: hidden;
 }
 
-.hero-image-wrapper {				/*настройка фотографии*/
+.hero-image-wrapper {
   margin-top: 300px;
   padding-bottom: 0px;
   display: flex;
@@ -110,7 +110,7 @@ section {				/*общая настройка секций*/
 .location {
   position: relative;
   padding: 100px 0px 100px;
-  background: #790013;						/*цвет поменять*/
+  background: #790013;
 }
   
 .location-img {
@@ -119,13 +119,14 @@ section {				/*общая настройка секций*/
 }
 
 .schedule {
-  padding: 400px 0px 400px;
-  background: #fbf5e9;						/*цвет поменять*/
+  position: relative;
+  padding: 200px 0px 100px;
+  background: #fbf5e9;
 }
 
 .dresscode {
   padding: 400px 0px 400px;
-  background: #790013;						/*цвет поменять*/
+  background: #790013;
 }
 
 .dresscode-image-wrapper {
@@ -312,6 +313,73 @@ h2 {
   margin-bottom: 20px;
 }
 
+.schedule-text {
+  /*position: absolute;
+  transform: translate(320px,-100px);*/
+  font-family: 'Caveat', cursive;
+  color: #2e2c27;
+  font-weight: 700;
+  font-size: 80px;
+}
+
+.time1 {
+  /*position: absolute;
+  transform: translate(150px,0px);*/
+  padding: 100px 0px 0px;
+  font-family: 'Caveat', cursive;
+  color: #2e2c27;
+  font-weight: 600;
+  font-size: 80px;
+}
+
+.time11 {
+  /*position: absolute;
+  transform: translate(150px,100px);*/
+  font-family: 'Caveat', cursive;
+  color: #2e2c27;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.time2 {
+  /*position: absolute;
+  transform: translate(0px,0px);*/
+  padding: 100px 0px 0px;
+  font-family: 'Caveat', cursive;
+  color: #2e2c27;
+  font-weight: 600;
+  font-size: 80px;
+}
+
+.time22 {
+  /*position: absolute;
+  transform: translate(0px,0px);*/
+  font-family: 'Caveat', cursive;
+  color: #2e2c27;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.time3 {
+  /*position: absolute;
+  transform: translate(0px,0px);*/
+  padding: 100px 0px 0px;
+  font-family: 'Caveat', cursive;
+  color: #2e2c27;
+  font-weight: 600;
+  font-size: 80px;
+}
+
+.time33 {
+  /*position: absolute;
+  transform: translate(0px,0px);*/
+  padding: 0px 0px 100px;
+  font-family: 'Caveat', cursive;
+  color: #2e2c27;
+  font-weight: 400;
+  font-size: 40px;
+}
+
 .schedule ul {
   list-style: none;
   padding: 0;
@@ -422,12 +490,20 @@ h2 {
 </section>
 
 <section class="schedule">
-  <h2>План дня</h2>
+  <div class="schedule-text">План дня</div>
+  <div class="time1">15:00</div>
+  <div class="time11">сбор гостей</div>
+  <div class="time2">16:00</div>
+  <div class="time22">церемония</div>
+  <div class="time3">17:00</div>
+  <div class="time33">банкет</div>
+  <!--
   <ul>
     <li>15:00 — Сбор гостей</li>
     <li>16:00 — Церемония</li>
     <li>18:00 — Праздничный ужин</li>
   </ul>
+  -->
 </section>
 
 <section class="dresscode">
