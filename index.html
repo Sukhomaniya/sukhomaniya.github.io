@@ -125,7 +125,8 @@ section {				/*общая настройка секций*/
 }
 
 .dresscode {
-  padding: 400px 0px 400px;
+  position: relative;
+  padding: 100px 0px 100px;
   background: #790013;
 }
 
@@ -142,7 +143,7 @@ section {				/*общая настройка секций*/
 }
 
 .gift {
-  padding: 400px 0px 400px;
+  padding: 100px 0px 100px;
   background: #fbf5e9;						/*цвет поменять*/
 }
 
@@ -159,12 +160,12 @@ section {				/*общая настройка секций*/
 }
 
 .form {
-  padding: 400px 0px 400px;
+  padding: 100px 0px 100px;
   background: #790013;						/*цвет поменять*/
 }
 
 .final {
-  padding: 400px 0px 400px;
+  padding: 100px 0px 100px;
   background: #790013;						/*цвет поменять*/
 }
 
@@ -390,6 +391,21 @@ h2 {
   margin: 12px 0;
 }
 
+.dresscode-text {
+  padding: 100px 0px 0px;
+  font-family: 'Caveat', cursive;
+  color: #fbf5e9;
+  font-weight: 600;
+  font-size: 80px;
+}
+
+.dresscode-text1 {
+  font-family: 'Caveat', cursive;
+  color: #fbf5e9;
+  font-weight: 600;
+  font-size: 40px;
+}
+
 .colors {
   display: flex;
   justify-content: center;
@@ -436,9 +452,11 @@ h2 {
   transform: translateX(337px);
 }
 
-.final {
-  font-family: 'Great Vibes', cursive;
-  font-size: 46px;
+.final-text {
+  font-family: 'Caveat', cursive;
+  color: #fbf5e9;
+  font-weight: 600;
+  font-size: 60px;
 }
 
 </style>
@@ -507,8 +525,8 @@ h2 {
 </section>
 
 <section class="dresscode">
-  <h2>Дресс-код</h2>
-  <p>Будем рады, если вы поддержите цветовую гамму</p>
+  <div class="dresscode-text">Дресс-код</div>
+  <div class="dresscode-text1">Будем рады, если вы поддержите цветовую гамму</div>
   <div class="colors">
     <span style="background:#d6c2b2"></span>
     <span style="background:#e8dcd1"></span>
@@ -542,7 +560,7 @@ h2 {
 </section>
 
 <section class="final">
-  Мы вас очень ждём 🤍
+  <div class="final-text">Мы вас очень ждём 🤍</div>
 </section>
 
 
