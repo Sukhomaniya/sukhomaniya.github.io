@@ -305,7 +305,7 @@ h2 {
 }
 
 .time1 {
-  padding: 100px 0px 0px;
+  padding: 50px 0px 0px;
   font-family: 'Caveat', cursive;
   color: #2e2c27;
   font-weight: 600;
@@ -313,12 +313,25 @@ h2 {
 }
 
 .time11 {
-  /*position: absolute;
-  transform: translate(150px,100px);*/
   font-family: 'Caveat', cursive;
   color: #2e2c27;
   font-weight: 500;
   font-size: 60px;
+}
+
+.champagne-img {
+  position: absolute;
+  transform: translate(-320px,-220px);
+  width: 20%;
+  max-width: 900px;
+}
+
+.food-img {
+  position: absolute;
+  transform: translate(150px,-180px);
+  transform: translate();
+  width: 20%;
+  max-width: 900px;
 }
 
 .schedule ul {
@@ -481,6 +494,8 @@ h2 {
   <div class="schedule-text">План дня</div>
   <div class="time1">16:00</div>
   <div class="time11">банкет</div>
+  <img src="images/шампанское.png" alt="Шампанское" class="champagne-img">
+  <img src="images/еда.png" alt="Еда" class="food-img">
   <!--
   <ul>
     <li>15:00 — Сбор гостей</li>
@@ -516,12 +531,6 @@ h2 {
     <option>Нет</option>
     <option>Пока не знаю</option>
   </select>
-
-  <label>С кем планируете прийти?</label>
-  <input type="text" placeholder="Имя Фамилия">
-
-  <label>Предпочтения по напиткам</label>
-  <input type="text" placeholder="Например: вино, шампанское">
 
   <button>Отправить</button>
 </section>
