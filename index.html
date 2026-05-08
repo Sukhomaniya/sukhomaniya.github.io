@@ -406,19 +406,6 @@ h2 {
   font-size: 30px;
 }
 
-/*
-input[type="radio"] {
-  appearance: none;
-  width: 22px;
-  height: 22px;
-  border: 2px solid #f3d6d6;
-  border-radius: 50%;
-}
-
-input[type="radio"]:checked {
-  background: #f3d6d6;
-}
-*/
 .form {
   width: 900px;
   margin: 0px auto;
@@ -525,52 +512,13 @@ input[type="radio"]:checked {
   background: rgba(246, 228, 230, 0.15);
 }
 
-/*
-.form-text {
-  padding: 50px 0px;
-  font-family: 'Caveat', cursive;
-  color: #fbf5e9;
-  font-weight: 500;
-  font-size: 40px;
+.form-success {
+  display: none;
+  margin-top: 32px;
   text-align: center;
+  font-size: 22px;
+  color: #fbf5e9;
 }
-
-.form {
-  text-align: left;
-}
-
-.form label {
-  display: block;
-  padding: 0px 25px;
-  margin-top: 20px;
-  font-weight: 600;
-}
-
-.form input, .form select {
-  width: 825px;
-  padding: 12px 0px 12px 10px;
-  margin-top: 8px;
-  border-radius: 18px;
-  border: 1px solid #ddd;
-  transform: translateX(25px);
-}
-
-.form button {
-  justify-content: center;
-  margin-top: 30px;
-  width: 225px;
-  padding: 15px;
-  border: none;
-  border-radius: 25px;
-  background: #d6c2b2;
-  color: #fff;
-  font-size: 18px;
-  transform: translateX(337px);
-}
-*/
-
-
-
 
 .final-text {
   font-family: 'Caveat', cursive;
@@ -659,7 +607,7 @@ input[type="radio"]:checked {
   <div class="gift-text1">Вместо цветов</div>
 </section>
 
-<form class="form">
+<form class="form" id="form">
   <p class="form-text">
     Пожалуйста, подтвердите свое присутствие, заполнив анкету ниже,<br>это поможет нам в организации нашего праздника
   </p>
@@ -674,24 +622,25 @@ input[type="radio"]:checked {
 
   <div class="radio-group">
     <label>
-      <input type="radio" name="visit">
+      <input type="radio" name="visit" value="Конечно да!">
       <span></span>
       Конечно да!
     </label>
 
     <label>
-      <input type="radio" name="visit">
+      <input type="radio" name="visit" value="К сожалению, нет(">
       <span></span>
       К сожалению, нет(
     </label>
 
     <label>
-      <input type="radio" name="visit">
+      <input type="radio" name="visit" value="Дам ответ чуть позже">
       <span></span>
       Дам ответ чуть позже
     </label>
   </div>
   <button class="form-button" type="submit">Отправить</button>
+  <p class="form-success" id="form-success">Спасибо за ответ!</p>
 </form>
 
 
@@ -701,51 +650,18 @@ document.getElementById('form').addEventListener('submit', function(e) {
   e.preventDefault();
 
   const formData = new FormData();
-  formData.append('entry.2125288479', this.attendance.value);
+  formData.append('entry.2125288479', this.visit.value);
 
-  fetch('https://docs.google.com/forms/d/e/1FAIpQLSeCuAM3lUvZZUNQUlY0VENeqxe--pFY453dovpcf40tfON7Lg/viewform?embedded=true', {
+  fetch('https://docs.google.com/forms/d/e/1FAIpQLSeCuAM3lUvZZUNQUlY0VENeqxe--pFY453dovpcf40tfON7Lg/formResponse', {
     method: 'POST',
     mode: 'no-cors',
     body: formData
   });
 
-  alert('Спасибо! Мы вас очень ждём 🤍');
   this.reset();
+  document.getElementById('form-success').style.display = 'block';
 });
 </script>
-
-
-<!--
-<form id="form">
-  <input type="form-text" name="name" placeholder="Имя и фамилия" required>
-
-  <div class="radio-group">
-    <label><input type="radio" name="attendance" value="Да"> Конечно да!</label>
-    <label><input type="radio" name="attendance" value="Нет"> К сожалению, нет</label>
-    <label><input type="radio" name="attendance" value="Позже"> Дам ответ позже</label>
-  </div>
-
-  <button type="submit">Отправить</button>
-</form>
--->
-
-
-
-<!--
-<section class="form">
-  <div class="form-text">Пожалуйста, подтвердите свое<br>присутствие, заполнив анкету ниже, это поможет нам в организации нашего праздника</div>
-
-  <label>Вы придёте?</label>
-  <select>
-    <option>Да</option>
-    <option>Нет</option>
-    <option>Пока не знаю</option>
-  </select>
-
-  <button>Отправить</button>
-</section>
--->
-
 
 <section class="final">
   <div class="final-text">Мы вас очень ждём 🤍</div>
