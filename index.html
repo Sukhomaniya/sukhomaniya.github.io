@@ -141,10 +141,14 @@ section {				/*общая настройка секций*/
   background: #fbf5e9;						/*цвет поменять*/
 }
 
+
+/*
 .form {
   padding: 100px 0px 100px;
-  background: #790019;						/*цвет поменять*/
+  background: #790019;
 }
+*/
+
 
 .final {
   padding: 100px 0px 100px;
@@ -402,6 +406,135 @@ h2 {
   font-size: 30px;
 }
 
+/*
+input[type="radio"] {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #f3d6d6;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked {
+  background: #f3d6d6;
+}
+*/
+.form {
+  width: 900px;
+  margin: 0px auto;
+  background: #790019;
+  padding: 50px 0px;
+  color: #fbf5e9;
+  font-family: 'Caveat', cursive;
+}
+
+.form-text {
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.4;
+}
+
+.form-input {
+  width: 900px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: #fbf5e9;
+  padding: 10px 30px;
+  outline: none;
+  font-family: inherit;
+}
+
+.form-input::placeholder {
+  color: rgba(246, 228, 230, 0.6);
+}
+
+.divider {
+  margin-left: 30px;
+  width: 800px;
+  height: 2px;
+  background: #fbf5e9;
+}
+
+.form-question {
+  display: flex;
+  align-items: flex-start;
+  padding: 0px 30px;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 30px;
+  gap: 22px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.radio input {
+  display: none;
+}
+
+.radio span {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 3px solid #fbf5e9;
+  position: relative;
+}
+
+.radio input:checked + span::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: #790019;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-button {
+  display: grid;
+  place-items: center;
+  margin-top: 48px;
+  width: 20%;
+  padding: 5px 0;
+  background: #fbf5e9;
+  border: 2px solid #fbf5e9;
+  border-radius: 40px;
+  color: #790019;
+  font-size: 24px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.form-button:active {
+  transform: scale(0.96);
+  background: rgba(246, 228, 230, 0.15);
+}
+
+/*
+.form-text {
+  padding: 50px 0px;
+  font-family: 'Caveat', cursive;
+  color: #fbf5e9;
+  font-weight: 500;
+  font-size: 40px;
+  text-align: center;
+}
+
 .form {
   text-align: left;
 }
@@ -434,6 +567,10 @@ h2 {
   font-size: 18px;
   transform: translateX(337px);
 }
+*/
+
+
+
 
 .final-text {
   font-family: 'Caveat', cursive;
@@ -522,8 +659,81 @@ h2 {
   <div class="gift-text1">Вместо цветов</div>
 </section>
 
+<form class="form">
+  <p class="form-text">
+    Пожалуйста, подтвердите свое присутствие, заполнив анкету ниже,<br>это поможет нам в организации нашего праздника
+  </p>
+  
+  <input class="form-input" type="text" placeholder="Имя и Фамилия">
+
+  <div class="divider"></div>
+
+  <p class="form-question">
+    Планируете присутствовать на свадьбе?
+  </p>
+
+  <div class="radio-group">
+    <label>
+      <input type="radio" name="visit">
+      <span></span>
+      Конечно да!
+    </label>
+
+    <label>
+      <input type="radio" name="visit">
+      <span></span>
+      К сожалению, нет(
+    </label>
+
+    <label>
+      <input type="radio" name="visit">
+      <span></span>
+      Дам ответ чуть позже
+    </label>
+  </div>
+  <button class="form-button" type="submit">Отправить</button>
+</form>
+
+
+
+<script>
+document.getElementById('form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const formData = new FormData();
+  formData.append('entry.2125288479', this.attendance.value);
+
+  fetch('https://docs.google.com/forms/d/e/1FAIpQLSeCuAM3lUvZZUNQUlY0VENeqxe--pFY453dovpcf40tfON7Lg/viewform?embedded=true', {
+    method: 'POST',
+    mode: 'no-cors',
+    body: formData
+  });
+
+  alert('Спасибо! Мы вас очень ждём 🤍');
+  this.reset();
+});
+</script>
+
+
+<!--
+<form id="form">
+  <input type="form-text" name="name" placeholder="Имя и фамилия" required>
+
+  <div class="radio-group">
+    <label><input type="radio" name="attendance" value="Да"> Конечно да!</label>
+    <label><input type="radio" name="attendance" value="Нет"> К сожалению, нет</label>
+    <label><input type="radio" name="attendance" value="Позже"> Дам ответ позже</label>
+  </div>
+
+  <button type="submit">Отправить</button>
+</form>
+-->
+
+
+
+<!--
 <section class="form">
-  <h2>Анкета гостя</h2>
+  <div class="form-text">Пожалуйста, подтвердите свое<br>присутствие, заполнив анкету ниже, это поможет нам в организации нашего праздника</div>
 
   <label>Вы придёте?</label>
   <select>
@@ -534,6 +744,8 @@ h2 {
 
   <button>Отправить</button>
 </section>
+-->
+
 
 <section class="final">
   <div class="final-text">Мы вас очень ждём 🤍</div>
