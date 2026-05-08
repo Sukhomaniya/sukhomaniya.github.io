@@ -612,7 +612,7 @@ h2 {
     Пожалуйста, подтвердите свое присутствие, заполнив анкету ниже,<br>это поможет нам в организации нашего праздника
   </p>
   
-  <input class="form-input" type="text" placeholder="Имя и Фамилия">
+  <input class="form-input" type="text" name="name" placeholder="Имя и Фамилия">
 
   <div class="divider"></div>
 
@@ -650,6 +650,7 @@ document.getElementById('form').addEventListener('submit', function(e) {
   e.preventDefault();
 
   const formData = new FormData();
+  formData.append('entry.60427185', this.name.value);
   formData.append('entry.2125288479', this.visit.value);
 
   fetch('https://docs.google.com/forms/d/e/1FAIpQLSeCuAM3lUvZZUNQUlY0VENeqxe--pFY453dovpcf40tfON7Lg/formResponse', {
