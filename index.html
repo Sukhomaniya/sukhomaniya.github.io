@@ -126,7 +126,7 @@ section {				/*общая настройка секций*/
 
 .dresscode {
   position: relative;
-  padding: 100px 0px 100px;
+  padding: 100px 0px 50px;
   background: #790019;
 }
 
@@ -399,18 +399,51 @@ h2 {
   font-size: 40px;
 }
 
+.looks-slider {
+  padding: 40px 0 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.looks-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slides {
+  display: flex;
+}
+
+.slides img {
+  width: 260px;
+  height: 360px;
+  object-fit: cover;
+  scroll-snap-align: center;
+  flex-shrink: 0;
+}
+
+
+/*
 .colors {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin: 25px 0;
+  padding: 70px;
+  background: #ffffff;
+  border-radius: 24px;
+  margin: 40px auto;
+  width: fit-content;
 }
 
 .colors span {
-  width: 45px;
-  height: 45px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
 }
+*/
+
 
 .gift-txt {
   padding: 0px 0px 50px;
@@ -702,12 +735,29 @@ h2 {
 
 <section class="dresscode">
   <div class="dresscode-text">Дресс-код</div>
-  <div class="dresscode-text1">Будем рады, если вы поддержите цветовую гамму</div>
+  <div class="dresscode-text1">Чтобы подчеркнуть значимость этого мероприятия, просим остановить выбор на соответствующих случаю вечерних нарядах:</div>
+  
+  <div class="looks-slider">
+    <div class="slides">
+      <img src="images/свадебный образ 1.jpg">
+      <img src="images/свадебный образ 2.jpg">
+      <img src="images/свадебный образ 3.jpg">
+      <img src="images/свадебный образ 4.jpg">
+      <img src="images/свадебный образ 5.jpg">
+      <img src="images/свадебный образ 6.jpg">
+    </div>
+  </div>
+
+
+  <!--
   <div class="colors">
     <span style="background:#d6c2b2"></span>
     <span style="background:#e8dcd1"></span>
     <span style="background:#bfa89e"></span>
   </div>
+  -->
+
+
 </section>
 
 <section class="gift">
