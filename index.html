@@ -152,7 +152,8 @@ section {				/*общая настройка секций*/
 
 .final {
   padding: 100px 0px 100px;
-  background: #790019;						/*цвет поменять*/
+  background: #790019;
+  position: relative;
 }
 
 .hero h1 {
@@ -534,6 +535,21 @@ h2 {
   font-size: 60px;
 }
 
+.final-txt {
+  font-family: 'Caveat', cursive;
+  color: #fbf5e9;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.final-img {
+  width: 100%;
+  max-width: 900px;
+  position: absolute;
+  bottom: -5%;
+  right: 0%;
+}
+
 </style>
 </head>
 
@@ -673,6 +689,8 @@ document.getElementById('form').addEventListener('submit', function(e) {
 
 <section class="final">
   <div class="final-text">Мы вас очень ждём!</div>
+  <div class="final-txt">ваши Уля и Женя</div>
+  <img src="images/финал.png" alt="Финал" class="final-img">
 </section>
 
 
