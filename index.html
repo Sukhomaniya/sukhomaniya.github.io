@@ -151,7 +151,7 @@ section {				/*общая настройка секций*/
 
 
 .final {
-  padding: 100px 0px 100px;
+  padding: 10px 0px 100px;
   background: #790019;
   position: relative;
 }
@@ -257,6 +257,42 @@ h2 {
   color: #790019;
   font-size: 60px;
   margin-bottom: 0px;
+}
+
+
+/*счетчик времени*/
+
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 40px auto;
+  color: #790019;
+}
+
+.time-block {
+  text-align: center;
+  padding: 0 50px;
+}
+
+.time-block:not(:last-child) {
+  border-right: 1px solid #790019;
+}
+
+.time-block span {
+  font-family: 'Caveat', cursive;
+  font-size: 42px;
+  font-weight: 500;
+  display: block;
+}
+
+.time-block small {
+  font-family: 'Caveat', cursive;
+  font-size: 25px;
+  letter-spacing: 5px;
+  opacity: 0.8;
 }
 
 .btn {
@@ -587,8 +623,59 @@ h2 {
   <div class="date-number">04.07.2026</div>
   <img src="images/календарь.png" alt="Календарь" class="date-img">
   <img src="images/Обводка календаря.png" alt="Обводка календаря" class="date-circle">
-  <!--<a class="btn" href="wedding.ics" download>Добавить в календарь</a>-->
+  <div class="countdown">
+    <div class="time-block">
+      <span id="days">00</span>
+      <small>дней</small>
+    </div>
+
+    <div class="time-block">
+      <span id="hours">00</span>
+      <small>часов</small>
+    </div>
+
+    <div class="time-block">
+      <span id="minutes">00</span>
+      <small>минут</small>
+    </div>
+
+    <div class="time-block">
+      <span id="seconds">00</span>
+      <small>секунд</small>
+    </div>
+  </div>
 </section>
+
+
+<!--скрипт на счетчик времени-->
+
+
+<script>
+  const weddingDate = new Date("2026-07-04T16:00:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const diff = weddingDate - now;
+
+    if (diff <= 0) {
+      document.querySelector(".countdown").innerHTML = "Сегодня праздник 🎉";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+    document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+    document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
 
 <section class="location">
   <div class="location-text">Место торжества</div>
@@ -632,7 +719,7 @@ h2 {
 
 <form class="form" id="form">
   <p class="form-text">
-    Пожалуйста, подтвердите свое присутствие, заполнив анкету ниже,<br>это поможет нам в организации нашего праздника
+    Пожалуйста, подтвердите свое присутствие, заполнив анкету ниже, это поможет нам в организации нашего праздника
   </p>
   
   <input class="form-input" type="text" name="name" placeholder="Имя и Фамилия">
