@@ -9,17 +9,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-    /*↓↓↓Эта хуйня чтобы на телефоне все хорошо работало в плане оформления↓↓↓*/
-    
+
   html, body {
     width: 900px;
     overflow-x: hidden;
   }
-    
-
-
-/*↓↓↓Эта хуйня чтобы на компе не работало↓↓↓*/
-
 
 /*
 #desktop-block {				
@@ -46,21 +40,21 @@
 }
 */
   
-body {								/*body это вокруг секций*/
+body {
   margin: 0;
-  background: #f7f5f5;						/*Возможно поменять бэкграунд*/
+  background: #f7f5f5;
   font-family: 'Playfair Display', serif;
 }
 
-section {				/*общая настройка секций*/
-  width: 900px;                     /*width пока не трогать, чтобы секция на весь экран не становилась, потом изменить на 100%*/
-  margin: 0px auto;			/*в конце работы поставить 0px*/
+section {
+  width: 900px;
+  margin: 0px auto;
   background: #fbf5e9;
   border-radius: 0;
   text-align: center;
 }
 
-.hero {						/*настройка секции главных героев*/
+.hero {
   position: relative;
   padding: 100px 0px 0px;
   background: #fbf5e9;
@@ -138,17 +132,8 @@ section {				/*общая настройка секций*/
 .gift {
   position: relative;
   padding: 100px 0px 100px;
-  background: #fbf5e9;						/*цвет поменять*/
+  background: #fbf5e9;
 }
-
-
-/*
-.form {
-  padding: 100px 0px 100px;
-  background: #790019;
-}
-*/
-
 
 .final {
   padding: 10px 0px 100px;
@@ -159,30 +144,24 @@ section {				/*общая настройка секций*/
 .hero h1 {
   font-family: 'Caveat', cursive;
   color: #790019;
-  font-weight: 700;						/*жирный*/
+  font-weight: 700;
   font-size: 100px;
   margin-bottom: 10px;
 }
 
-.hero-title1 {							/*Тили - Тили*/
+.hero-title1 {
   position: absolute;
   top: -5%;
   left: 15%;
   transform: rotate(-3deg);
 }
 
-.hero-title2 {							/*Тесто!*/
+.hero-title2 {
   position: absolute;
   top: 5%;
   right: 15%;
   transform: rotate(2deg);
 }
-
-
-
-/*Жених*/
-
-
 
 .names1 {
   position: absolute;
@@ -194,12 +173,6 @@ section {				/*общая настройка секций*/
   font-weight: 600;
   font-size: 80px;
 }
-
-
-
-/*Невеста*/
-
-
 
 .names2 {
   position: absolute;
@@ -233,7 +206,6 @@ section {				/*общая настройка секций*/
   font-size: 55px;
 }
 
-
 .subtitle {
   font-size: 18px;
   opacity: 0.8;
@@ -258,10 +230,6 @@ h2 {
   font-size: 60px;
   margin-bottom: 0px;
 }
-
-
-/*счетчик времени*/
-
 
 .countdown {
   display: flex;
@@ -604,7 +572,7 @@ h2 {
 <body>
 
 
-<!-- ↓↓↓Эта хуйня чтобы на компе не работало↓↓↓ -->							<!--здесь начинается HTML-->
+<!--здесь начинается HTML-->
 
 
 <!--
@@ -616,6 +584,7 @@ h2 {
   </div>
 </div>
 -->
+    
 <section class="hero">
   <h1 class="hero-title1">Тили - Тили</h1>
   <h1 class="hero-title2">Тесто!</h1>
@@ -658,10 +627,6 @@ h2 {
   </div>
 </section>
 
-
-<!--скрипт на счетчик времени-->
-
-
 <script>
   const weddingDate = new Date("2026-07-04T16:00:00").getTime();
 
@@ -703,13 +668,6 @@ h2 {
   <div class="time11">банкет</div>
   <img src="images/шампанское.png" alt="Шампанское" class="champagne-img">
   <img src="images/еда.png" alt="Еда" class="food-img">
-  <!--
-  <ul>
-    <li>15:00 — Сбор гостей</li>
-    <li>16:00 — Церемония</li>
-    <li>18:00 — Праздничный ужин</li>
-  </ul>
-  -->
 </section>
 
 <section class="dresscode">
@@ -726,17 +684,6 @@ h2 {
       <img src="images/свадебный образ 6.jpg">
     </div>
   </div>
-
-
-  <!--
-  <div class="colors">
-    <span style="background:#d6c2b2"></span>
-    <span style="background:#e8dcd1"></span>
-    <span style="background:#bfa89e"></span>
-  </div>
-  -->
-
-
 </section>
 
 <section class="gift">
