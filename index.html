@@ -417,7 +417,7 @@ h2 {
 
 .form-text {
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   line-height: 1.4;
 }
 
@@ -425,7 +425,7 @@ h2 {
   width: 900px;
   background: transparent;
   border: none;
-  font-size: 22px;
+  font-size: 30px;
   color: #fbf5e9;
   padding: 10px 30px;
   outline: none;
@@ -447,7 +447,7 @@ h2 {
   display: flex;
   align-items: flex-start;
   padding: 0px 30px;
-  font-size: 24px;
+  font-size: 35px;
   margin-bottom: 20px;
 }
 
@@ -459,42 +459,49 @@ h2 {
   gap: 22px;
 }
 
-.radio {
+.radio-option {
   display: flex;
   align-items: center;
-  gap: 16px;
-  font-size: 22px;
+  gap: 14px;
+  font-size: 30px;
   cursor: pointer;
-}
-
-.radio input {
-  display: none;
-}
-
-.radio span {
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  border: 3px solid #fbf5e9;
   position: relative;
 }
 
-.radio input:checked + span::after {
+.radio-option input {
+  position: absolute;
+  opacity: 0;
+}
+
+.custom-radio {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #fbf5e9;
+  border-radius: 50%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.custom-radio::after {
   content: '';
+  width: 10px;
+  height: 10px;
+  background: #fbf5e9;
+  border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 14px;
-  height: 14px;
-  background: #790019;
-  border-radius: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.radio-option input:checked + .custom-radio::after {
+  opacity: 1;
 }
 
 .form-button {
-  display: grid;
-  place-items: center;
-  margin-top: 48px;
+  display: block;
+  margin: 48px auto 0;
   width: 20%;
   padding: 5px 0;
   background: #fbf5e9;
@@ -621,21 +628,21 @@ h2 {
   </p>
 
   <div class="radio-group">
-    <label>
+    <label class="radio-option">
       <input type="radio" name="visit" value="Конечно да!">
-      <span></span>
+      <span class="custom-radio"></span>
       Конечно да!
     </label>
 
-    <label>
+    <label class="radio-option">
       <input type="radio" name="visit" value="К сожалению, нет(">
-      <span></span>
+      <span class="custom-radio"></span>
       К сожалению, нет(
     </label>
 
-    <label>
+    <label class="radio-option">
       <input type="radio" name="visit" value="Дам ответ чуть позже">
-      <span></span>
+      <span class="custom-radio"></span>
       Дам ответ чуть позже
     </label>
   </div>
@@ -665,7 +672,7 @@ document.getElementById('form').addEventListener('submit', function(e) {
 </script>
 
 <section class="final">
-  <div class="final-text">Мы вас очень ждём 🤍</div>
+  <div class="final-text">Мы вас очень ждём!</div>
 </section>
 
 
